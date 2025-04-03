@@ -1,4 +1,4 @@
-1. Creating the S3 Bucket
+1.** Creating the S3 Bucket**
 Created an S3 bucket named athena-demoanita.
 
 Inside the bucket, created two folders:
@@ -7,19 +7,19 @@ athenainput/ – For storing input files.
 
 athenaresultanita/ – For storing query results.
 
-2. Uploading Data
+2. **Uploading Data**
 Uploaded a 57.4MB CSV file into the athenainput/ folder.
 
-3. Setting Up AWS Athena
+3. **Setting Up AWS Athena**
 Navigated to AWS Athena and opened the Query Editor.
 
-Created a database named demo using the following query:
+**Created a database named demo using the following query:**
 
 sql
 Copy
 Edit
 CREATE DATABASE demo;
-4. Creating the Table
+4. **Creating the Table**
 Created a table named students in the demo database, with the following schema:
 
 sql
@@ -39,7 +39,7 @@ WITH SERDEPROPERTIES (
     'skip.header.line.count' = '1'  -- Skips the header row
 )
 LOCATION 's3://athena-demoanita/athenainput/';
-5. Querying the Data
+5.** Querying the Data**
 Saved the table configuration and previewed the data using:
 
 sql
