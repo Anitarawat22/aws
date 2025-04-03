@@ -1,4 +1,4 @@
-1.** Creating the S3 Bucket**
+1. ** Creating the S3 Bucket**
 Created an S3 bucket named athena-demoanita.
 
 Inside the bucket, created two folders:
@@ -46,3 +46,13 @@ sql
 Copy
 Edit
 SELECT * FROM demo.students LIMIT 10;
+so it is sacnning the whole day 
+
+**To optimize this**
+
+we will be changes the file format to parquert it will skip the unnessary columns
+and creating a partition and it will skip the unnessary rows
+
+we will be coverting the csv file to parquet format
+and use msck repair 
+and this will scan only the data you have mentoined in the query editor.
